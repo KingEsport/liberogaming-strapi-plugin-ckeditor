@@ -1,6 +1,6 @@
 {
-  "name": "@ckeditor/strapi-plugin-ckeditor",
-  "version": "0.0.10",
+  "name": "@kingesport/liberogaming-strapi-plugin-ckeditor",
+  "version": "1.0.0",
   "description": "CKEditor 5 custom field for Strapi.",
   "strapi": {
     "name": "ckeditor",
@@ -64,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/strapi-plugin-ckeditor.git"
+    "url": "https://github.com/kingesport/liberogaming-strapi-plugin-ckeditor.git"
   },
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://market.strapi.io/plugins/@ckeditor-strapi-plugin-ckeditor",

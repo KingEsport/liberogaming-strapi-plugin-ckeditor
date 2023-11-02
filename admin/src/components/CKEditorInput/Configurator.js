@@ -121,16 +121,33 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       StrapiMediaLib
     ],
     toolbar: [
-        'undo', 'redo',
-        '|',
-        'heading',
-        '|',
-        'bold', 'italic',
-        '|',
-        'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
-        '|',
-        'bulletedList', 'numberedList', 'outdent', 'indent'
+      'undo', 'redo',
+      '|',
+      'heading',
+      '|',
+      'bold', 'italic',
+      '|',
+      'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
+      '|',
+      'bulletedList', 'numberedList', 'outdent', 'indent'
     ],
+    htmlSupport: {
+      allow: [
+        // Enables plain <div> elements.
+        {
+          name: 'div'
+        },
+        {
+          name: 'p'
+        },
+        {
+          name: 'img'
+        },
+        {
+          name: 'br'
+        }
+      ]
+    },
     heading: {
       options: [
         { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
@@ -222,15 +239,13 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         '|',
         'heading',
         '|',
-        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
+        'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'removeFormat',
         '|',
-        'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'code', 'removeFormat',
-        '-',
-        'link', 'strapiMediaLib', 'mediaEmbed', 'insertTable', 'horizontalLine', 'blockQuote', 'codeBlock', 'htmlEmbed', 'specialCharacters', 'highlight',
+        'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'specialCharacters',
         '|',
         'alignment',
         '|',
-        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent', 
+        'bulletedList', 'numberedList', 'outdent', 'indent',
       ],
       shouldNotGroupWhenFull: true
     },
@@ -245,9 +260,9 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     },
     list: {
       properties: {
-          styles: true,
-          startIndex: true,
-          reversed: true
+        styles: true,
+        startIndex: true,
+        reversed: true
       }
     },
     image: {
@@ -257,21 +272,21 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         value: null,
         icon: 'original'
       },
-      {
-        name: 'resizeImage:25',
-        value: '25',
-        icon: 'small'
-      },
-      {
-        name: 'resizeImage:50',
-        value: '50',
-        icon: 'medium'
-      },
-      {
-        name: 'resizeImage:75',
-        value: '75',
-        icon: 'large'
-      } ],
+        {
+          name: 'resizeImage:25',
+          value: '25',
+          icon: 'small'
+        },
+        {
+          name: 'resizeImage:50',
+          value: '50',
+          icon: 'medium'
+        },
+        {
+          name: 'resizeImage:75',
+          value: '75',
+          icon: 'large'
+        } ],
       toolbar: [
         'imageStyle:inline', 'imageStyle:block', 'imageStyle:side',
         '|',
@@ -296,15 +311,15 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     },
     fontSize: {
       options: [
-          9,
-          11,
-          13,
-          'default',
-          17,
-          19,
-          21,
-          27,
-          35,
+        9,
+        11,
+        13,
+        'default',
+        17,
+        19,
+        21,
+        27,
+        35,
       ],
       supportAllValues: false
     },
