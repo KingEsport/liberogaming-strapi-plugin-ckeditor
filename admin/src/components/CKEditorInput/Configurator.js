@@ -1,5 +1,4 @@
 import ckeditor5Dll from "ckeditor5/build/ckeditor5-dll.js";
-
 import ckeditor5AlignmentDll from "@ckeditor/ckeditor5-alignment/build/alignment.js";
 import ckeditor5AutoformatDll from "@ckeditor/ckeditor5-autoformat/build/autoformat.js";
 import ckeditor5BasicStylesDll from "@ckeditor/ckeditor5-basic-styles/build/basic-styles.js";
@@ -12,7 +11,6 @@ import ckeditor5HighlightDll from '@ckeditor/ckeditor5-highlight/build/highlight
 import ckeditor5HtmlEmbedDll from "@ckeditor/ckeditor5-html-embed/build/html-embed.js";
 import ckeditor5HorizontalLineDll from "@ckeditor/ckeditor5-horizontal-line/build/horizontal-line.js";
 import ckeditor5MarkdownDll from '@ckeditor/ckeditor5-markdown-gfm/build/markdown-gfm';
-import ckeditor5MediaEmbedDll from "@ckeditor/ckeditor5-media-embed/build/media-embed.js";
 import ckeditor5ImageDll from "@ckeditor/ckeditor5-image/build/image.js";
 import ckeditor5IndentDll from "@ckeditor/ckeditor5-indent/build/indent.js";
 import ckeditor5LinkDll from "@ckeditor/ckeditor5-link/build/link.js";
@@ -24,6 +22,7 @@ import ckeditor5SpecialCharactersDll from "@ckeditor/ckeditor5-special-character
 import ckeditor5TableDll from "@ckeditor/ckeditor5-table/build/table.js";
 import ckeditor5WordCountDll from "@ckeditor/ckeditor5-word-count/build/word-count.js";
 import ckeditor5MaximumLengthDll from "@reinmar/ckeditor5-maximum-length/build/maximum-length.js";
+import ckeditor5SourceEditingDll from '@ckeditor/ckeditor5-source-editing/build/source-editing.js';
 import { StrapiMediaLib } from "./plugins/StrapiMediaLib";
 
 const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
@@ -110,7 +109,6 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.link.Link,
       window.CKEditor5.link.LinkImage,
       window.CKEditor5.list.List,
-      window.CKEditor5.mediaEmbed.MediaEmbed,
       window.CKEditor5.paragraph.Paragraph,
       window.CKEditor5.pasteFromOffice.PasteFromOffice,
       window.CKEditor5.table.Table,
@@ -127,7 +125,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       '|',
       'bold', 'italic',
       '|',
-      'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'insertTable', 'codeBlock',
+      'link', 'strapiMediaLib', 'blockQuote', 'insertTable', 'codeBlock',
       '|',
       'bulletedList', 'numberedList', 'outdent', 'indent'
     ],
@@ -215,7 +213,6 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.list.List,
       window.CKEditor5.list.ListProperties,
       window.CKEditor5.list.TodoList,
-      window.CKEditor5.mediaEmbed.MediaEmbed,
       window.CKEditor5.paragraph.Paragraph,
       window.CKEditor5.pasteFromOffice.PasteFromOffice,
       window.CKEditor5.removeFormat.RemoveFormat,
@@ -229,6 +226,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.table.TableCaption,
       window.CKEditor5.wordCount.WordCount,
       window.CKEditor5.highlight.Highlight,
+      window.CKEditor5.sourceEditing.SourceEditing,
       StrapiMediaLib
     ],
     toolbar: {
@@ -241,11 +239,11 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         '|',
         'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'removeFormat',
         '|',
-        'link', 'strapiMediaLib', 'mediaEmbed', 'blockQuote', 'specialCharacters',
+        'link', 'strapiMediaLib', 'blockQuote', 'specialCharacters',
         '|',
         'alignment',
         '|',
-        'bulletedList', 'numberedList', 'outdent', 'indent',
+        'bulletedList', 'numberedList', 'outdent', 'indent', 'sourceEditing'
       ],
       shouldNotGroupWhenFull: true
     },
